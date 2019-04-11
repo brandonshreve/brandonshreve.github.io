@@ -1,6 +1,7 @@
 body {
     color: #1d1c1c;
     background-color: aliceblue;
+    margin-top: 50px;
 }
 .about {
     width: 50%;
@@ -12,7 +13,8 @@ h1 {
     font-size: 38pt;
     font-family: Roboto,sans-serif;
     font-weight: 900;
-    display: block;
+    display: inline-block;
+    vertical-align: top;
 }
 
 p {
@@ -21,17 +23,18 @@ p {
     font-size: 16pt;
     font-family: Nunito Sans,sans-serif;
     font-weight: 300;
-    display: inline-block;
 }
 
 img {
+    display: inline-block;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin-right: 15px;
     overflow: hidden;
-    /* display: block; */
-    /* float: left; */
-
     box-shadow: 1px 1px 1px #ccc;
+}
+
+.about-header {
+    width: 100%;
 }
