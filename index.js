@@ -1,5 +1,0 @@
-let personalProjects = './'
-
-function personalProjects() {
-
-}
