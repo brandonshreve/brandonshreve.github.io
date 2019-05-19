@@ -1,5 +1,5 @@
-function foo() {
-    console.log('foobar');
-}
+let personalProjects = './'
 
-foo();
+function personalProjects() {
+
+}

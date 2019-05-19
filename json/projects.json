@@ -1,0 +1,22 @@
+[
+    {
+        "title": "SubtleColor.com",
+        "description": "Personal portfolio website. Written in vanilla JavaScript, HTML5, CSS3.",
+        "link": "https://github.com/brandonshreve/brandonshreve.github.io"
+    },
+    {
+        "title": "FSBookmarklet",
+        "descrition": "A bookmarklet for FakeSpot",
+        "link": "https://github.com/brandonshreve/FSBookmarklet"
+    },
+    {
+        "title": "RfHb",
+        "description": "A HandBrake helper for larger directory trees. Recursively calls the transcoder for a given directory.",
+        "link": "https://github.com/brandonshreve/RfHb"
+    },
+    {
+        "title": "RideAzon",
+        "description": "Ride-sharing application for local events.",
+        "link": "https://github.com/brandonshreve/RideAzon"
+    }
+]
