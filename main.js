@@ -41,6 +41,7 @@ function addProjectsToDom() {
         const textNode = document.createTextNode(project.title);
 
         anchorElement.setAttribute('href', project.link);
+        anchorElement.setAttribute('target', '_blank');
         anchorElement.appendChild(textNode);
         liElement.appendChild(anchorElement);
         ulElement.appendChild(liElement);
@@ -56,6 +57,7 @@ function addLinksToDom() {
         const textNode = document.createTextNode(site.name);
 
         anchorElement.setAttribute('href', site.link);
+        anchorElement.setAttribute('target', '_blank');
         anchorElement.appendChild(textNode);
         liElement.appendChild(anchorElement);
         ulElement.appendChild(liElement);
