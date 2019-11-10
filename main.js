@@ -1,6 +1,6 @@
 let projects = [
     {
-        "title": "SubtleColor.com",
+        "title": "BrandonShreve.dev",
         "description": "Personal portfolio website. Written in vanilla JavaScript, HTML5, CSS3.",
         "link": "https://github.com/brandonshreve/brandonshreve.github.io"
     },
