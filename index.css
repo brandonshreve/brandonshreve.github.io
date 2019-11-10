@@ -8,7 +8,6 @@ body {
 footer {
     position: absolute;
     bottom: 1%;
-    right: 70%;
 }
 
 h1#name {
@@ -40,6 +39,10 @@ img.fat-head {
 img.fat-head:hover {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+}
+
+.contact-form-label {
+    display: table-cell; width: 15%; margin-bottom: 10px; vertical-align: middle;
 }
 
 .about-header {
