@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            span {
+                padding: 50px 0 50px 0;
+            }
+
+            #progress-bar-container {
+                height: 50px;
+                width: 500px;
+                background-color: blue;
+            }
+
+            #progress-bar {
+                height: 50px;
+                width: 0px;
+                background-color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Progress Bars</h1>
+
+        <span>setInterval Implementation</span>
+        <div id="progress-bar-container">
+            <div id="progress-bar">
+            </div>
+        </div>
+
+        <span>Request Animation Frame</span>
+
+        <span>Element.animate Implementation</span>
+
+
+
+        <script>
+            function animateProgressBar() {
+                console.log("Foo!")
+                let progressBar = document.getElementById("progress-bar");
+                console.log("progressBar!", progressBar)
+                let currentWidthPercentage = 0;
+
+                let interval = setInterval(() => {
+                    currentWidthPercentage += 10;
+
+                    if(currentWidthPercentage > 100) {
+                        currentWidthPercentage = 0;
+                    }
+
+                    progressBar.style.width = currentWidthPercentage + "%";
+                }, 1000);
+
+            }
+            animateProgressBar();
+        </script>
+    </body>
+</html>
