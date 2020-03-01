@@ -40,15 +40,24 @@
                 let liElement = document.createElement('li');
                 let spanEle = document.createElement('span');
                 spanEle.innerText = productName;
+
+                let deleteBtn = document.createElement('button');
+                deleteBtn.innerText = 'Remove from Cart';
+                deleteBtn.addEventListener('click', deleteFromCart);
+
                 liElement.appendChild(spanEle);
-                
+                liElement.appendChild(deleteBtn);
 
                 // Adding new element to Cart list
                 cart.appendChild(liElement);
             }
 
             deleteFromCart = (e) => {
-                
+                let productName = e.srcElement.parentElement;
+                console.log('Removing ', productName, ' from cart');
+
+
+                cart.removeChild(productName);
             }
 
         </script>
