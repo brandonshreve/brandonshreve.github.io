@@ -105,3 +105,56 @@ console.log('Recursive Sum ES5', resultTwo);
 
 console.log('/***************************************');
 console.log('Question 5: Promisfy a function');
+
+
+/*
+    Question 6: Debounce implementation
+*/
+
+console.log('/***************************************');
+console.log('Question 6: Debounce implementation');
+
+/*
+    Question 7: Throttle implementation
+*/
+
+console.log('/***************************************');
+console.log('Question 7: Throttle implementation');
+
+throttle = () => {
+    console.log('throttle');
+}
+
+/*
+    Question 8: Closures
+*/
+console.log('/***************************************');
+console.log('Question 8: Closures');
+
+
+/*
+    Question 9: Bind, call, apply
+*/
+console.log('/***************************************');
+console.log('Question 9: Bind, call, apply');
+
+let objTwo = {
+    name: 'Foo',
+    getName: function() {
+        return this.name;
+    }
+}
+
+let objThree = {
+    name: 'Bar'
+}
+
+let outOfContext = objTwo.getName;
+console.log('Original context- This will be Foo: ', objTwo.getName());
+console.log('Out of context- This will be undeclared:', outOfContext());
+console.log('Function called in a new context- This will be Bar: ', outOfContext.call(objThree));
+
+
+// (() => {
+//     console.log('Immediatley Invoked Anonymous Function');
+// })();
