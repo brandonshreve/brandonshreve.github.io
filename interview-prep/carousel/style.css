@@ -1,0 +1,21 @@
+#carousel-container > img {
+    color: blueviolet;
+    height: 200px;
+    width: 100px;
+}
+
+img { 
+    object-fit: cover;
+}
+
+li {
+    display: inline;
+    position: absolute;
+}
+
+#carousel-container > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 200px;
+}

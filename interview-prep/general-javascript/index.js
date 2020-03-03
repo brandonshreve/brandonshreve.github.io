@@ -142,6 +142,9 @@ let objTwo = {
     name: 'Foo',
     getName: function() {
         return this.name;
+    },
+    getNameArrowFunct: () => {
+        return this.name
     }
 }
 
@@ -153,6 +156,10 @@ let outOfContext = objTwo.getName;
 console.log('Original context- This will be Foo: ', objTwo.getName());
 console.log('Out of context- This will be undeclared:', outOfContext());
 console.log('Function called in a new context- This will be Bar: ', outOfContext.call(objThree));
+
+let outOfContextTwo = objTwo.getNameArrowFunct;
+console.log('Arrow function... in context: ', objTwo.getNameArrowFunct());
+console.log('I dont think any of this works on arrow functions: ', outOfContextTwo(), outOfContextTwo.call(objThree));
 
 
 // (() => {
