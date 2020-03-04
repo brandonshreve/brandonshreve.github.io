@@ -1,9 +1,20 @@
 .accordion-section {
     background-color: cadetblue;
-    height: 500px;
     width: 500px;
+    transition: display 0.2s linear;
 }
 
 .accordion-section-hidden {
     display: none;
+}
+
+
+.accordion-header button {
+    border: none;
+    background-color: transparent;
+}
+
+.accordion-header button:hover {
+    border: none;
+    background-color: blanchedalmond;
 }

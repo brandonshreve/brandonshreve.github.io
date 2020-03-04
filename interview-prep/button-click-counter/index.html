@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interview Prep - Button Incrementer w/ multiple buttons</title>
+    </head>
+    <body>
+        <div>
+            <button id="add-new-btn">Add New Button</button>
+        </div>
+        <div id="counter-container">
+            <div id="button-container">
+                <span data-button-id="0" id="counter-text">0</span>
+                <button data-button-id="0" id="counter-btn">Increment</button>
+            </div>
+        </div>
+        <script>
+            // Add event listener to parent container of button
+            let counterContainer = document.getElementById("counter-container");
+            counterContainer.addEventListener('click', incrementButtonClickCounter());
+
+            // Add event listener to add new button
+            document.getElementById('add-new-btn').addEventListener('click', addNewButton);
+
+            // Keep track of number of button ids
+            let lastAddedButtonId = 0;
+
+            function incrementButtonClickCounter(event) {
+                // Keep track of how many times button has been clicked
+                let buttonCount;
+
+                return function(event) {
+                    if(!buttonCount) buttonCount = new Map();
+
+                    if(event.target && event.target.tagName.toLowerCase() === 'button') {
+                        let id = event.target.getAttribute('data-button-id');
+                        let currentCount = buttonCount.get(id) || 0;
+                        currentCount++;
+                        buttonCount.set(id, currentCount);
+                        
+                        let textElement = event.target.previousElementSibling;
+                        textElement.innerText = currentCount;
+                    }
+                }
+            }
+
+            function addNewButton(event) {
+                // Increment ID so all IDs in DOM are unique
+                lastAddedButtonId++;
+
+                // Construct both DOM Node Elements, span and button
+                let buttonContainer = document.createElement('div');
+                buttonContainer.setAttribute('id', 'button-container');
+
+                let spanElement = document.createElement('span');
+                spanElement.innerText = '0';
+                spanElement.setAttribute('data-button-id', lastAddedButtonId);
+
+                let buttonElement = document.createElement('button');
+                buttonElement.innerText = 'Increment';
+
+                buttonElement.setAttribute('data-button-id', lastAddedButtonId);
+                
+                // Insert Elements into Container
+                buttonContainer.appendChild(spanElement);
+                buttonContainer.appendChild(buttonElement);
+                counterContainer.appendChild(buttonContainer);
+            }
+
+        </script>
+    </body>
+</html>
