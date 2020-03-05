@@ -83,7 +83,8 @@ img.fat-head:hover {
 }
 
 #dropdown-menu ul li:hover {
-    background-color: #ccc
+    background-color: #ccc;
+    cursor: pointer;
 }
 
 #dropdown-menu ul li ul {
