@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #set-interval-container, #element-animate-container, #request-animation-frame-container {
+            background-color: red;
+            width: 500px;
+            height: 100px;
+        }
+
+         #element-animate-child, #set-interval-child, #request-animation-frame-child {
+            background-color: blue;
+            height: 100%;
+            width: 0px;
+        }
+
+        span {
+            position: absolute;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Requirements
+    </h1>
+    <p>Animations must run at 60 frames per second</p>
+
+    <h2>Element.animate()</h2>
+    <div id="element-animate-container">
+        <span>Framerate: </span>
+        <div id="element-animate-child"></div>
+    </div>
+    <h2>Set Interval</h2>
+    <div id="set-interval-container">
+        <span>Framerate: </span>
+        <div id="set-interval-child"></div>
+    </div>
+    <h2>Request Animation Frame</h2>
+        <div id="request-animation-frame-container">
+            <span>Framerate: 0</span>
+            <div id="request-animation-frame-child"></div>
+        </div>
+    <script>
+        function stepForRequestAnimationFrame() {
+            let element = document.getElementById("request-animation-frame-container");
+            let divChildElement = element.lastElementChild;
+            let spanChildElement = element.firstElementChild;
+            let currentProgress = 0;
+
+            return function foo() {
+                if(currentProgress === 100) currentProgress = 0;
+
+                currentProgress++;
+                divChildElement.style.width = currentProgress + '%';;
+                spanChildElement.textContent = `Frame: ${currentProgress}`;
+
+                requestAnimationFrame(foo);
+            }
+        }
+
+        function animateRequestAnimationFrame(toggle) {
+            requestAnimationFrame(stepForRequestAnimationFrame());
+        }
+
+        function animateSetInterval(toggle) {
+            let interval;
+            if(!toggle) {
+                let element = document.getElementById("set-interval-container");
+                let divChildElement = element.lastElementChild;
+                let spanChildElement = element.firstElementChild;
+                let currentProgress = 0;
+                let framerate = 1000 / 60; // This will be unreliable
+
+                interval = setInterval(() => {
+                    if(currentProgress === 100) currentProgress = 0;
+                    currentProgress++;
+                    divChildElement.style.width = currentProgress + '%';
+                    spanChildElement.textContent = `Frame: ${currentProgress}`
+                }, framerate);
+            } else {
+                clearInterval(interval);
+            }
+
+        }
+
+        function animateElementAnimate() {
+
+        }
+
+        animateSetInterval(false);
+        animateRequestAnimationFrame(false);
+    </script>
+</body>
+</html>
