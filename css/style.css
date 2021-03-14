@@ -21,6 +21,10 @@ span#name::before {
     content: '>';
 }
 
+h1 {
+    margin-bottom: 2rem;
+}
+
 .connect-container {
     display: flex;
     justify-content: flex-start;
@@ -56,4 +60,36 @@ button[type="submit"] {
     cursor: pointer;
     color: #fff;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.fat-head {
+    margin-bottom: 2rem;
+}
+
+.fat-head img {
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    animation-name: move-in-from-right, rolling;
+    animation-duration: 3s;
+}
+
+@keyframes move-in-from-right {
+    from {
+        margin-left: 100%;
+      }
+    
+      to {
+        margin-left: 0%;
+      }
+}
+
+@keyframes rolling {
+    from {
+        transform: rotate(360deg);
+      }
+    
+      to {
+        transform: rotate(0deg);
+      }
 }
