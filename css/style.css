@@ -72,6 +72,7 @@ button[type="submit"] {
     width: 10rem;
     animation-name: move-in-from-right, rolling;
     animation-duration: 3s;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
 @keyframes move-in-from-right {
