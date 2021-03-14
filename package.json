@@ -2,10 +2,10 @@
   "name": "brandonshreve.github.io",
   "version": "1.0.0",
   "description": "Personal portfolio website. Written in vanilla JavaScript, HTML5, CSS3.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "http-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npx eslint **/*.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,6 @@
   "keywords": [
     "brandon",
     "shreve",
-    "subtlecolor",
     "portfolio"
   ],
   "author": "Brandon Shreve",
@@ -22,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/brandonshreve/brandonshreve.github.io/issues"
   },
-  "homepage": "https://github.com/brandonshreve/brandonshreve.github.io#readme"
+  "homepage": "https://github.com/brandonshreve/brandonshreve.github.io#readme",
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "lighthouse": "^7.2.0"
+  }
 }

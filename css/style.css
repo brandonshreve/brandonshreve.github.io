@@ -1,0 +1,89 @@
+span#name {
+    font-size: 3rem;
+    font-style: italic;
+    color: lightblue;
+    text-shadow: 1px 2px blue;
+}
+
+.connect-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.connect-container i {
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+body {
+    font-family: "Roboto Slab", monospace, serif;
+    background-color: aliceblue;
+    padding: 10vw;
+}
+
+footer {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 1%;
+}
+
+h1#name {
+    font-size: 38pt;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contact-form-label {
+    display: table-cell; width: 15%; margin-bottom: 10px; vertical-align: middle;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width:768px) {
+    h1#name {
+        font-size: 28pt;
+    }
+
+    h3 {
+        font-size: 16pt;
+    }
+
+    p {
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    h1#name {
+        font-size: 18pt;
+    }
+
+    p h3 {
+        font-size: 12pt;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    img.fat-head {
+        display: none;
+    }
+
+    #links-container {
+        display: block;
+    }
+
+    .about-header {
+        display: block;
+    }
+    
+    #links-container section {
+        width: 100%;
+    }
+
+    footer {
+        display: none;
+    }
+}
