@@ -30,10 +30,15 @@ h1 {
     margin-right: 2rem;
 }
 
+.contact-form {
+    max-width: 30rem;
+}
+
 body {
     font-family: "Roboto Slab", monospace, serif;
     background-color: aliceblue;
-    padding: 10vw;
+    padding: 5vw;
+    position: relative;
 }
 
 footer {
